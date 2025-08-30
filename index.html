@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+       <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex | Explore the World of Pokémon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">
+                <i class="fas fa-circle-dot"></i>
+                Pokédex
+            </h1>
+            <p class="subtitle">Explore o mundo dos Pokémon</p>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="search-section">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar Pokémon...">
+                <button id="clearSearch" class="clear-search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="filters">
+                <select id="typeFilter" class="filter-select">
+                    <option value="">Todos os tipos</option>
+                    <option value="normal">Normal</option>
+                    <option value="fire">Fogo</option>
+                    <option value="water">Água</option>
+                    <option value="electric">Elétrico</option>
+                    <option value="grass">Grama</option>
+                    <option value="ice">Gelo</option>
+                    <option value="fighting">Lutador</option>
+                    <option value="poison">Venenoso</option>
+                    <option value="ground">Terra</option>
+                    <option value="flying">Voador</option>
+                    <option value="psychic">Psíquico</option>
+                    <option value="bug">Inseto</option>
+                    <option value="rock">Pedra</option>
+                    <option value="ghost">Fantasma</option>
+                    <option value="dragon">Dragão</option>
+                    <option value="dark">Sombrio</option>
+                    <option value="steel">Aço</option>
+                    <option value="fairy">Fada</option>
+                </select>
+
+                <select id="generationFilter" class="filter-select">
+                    <option value="">Todas gerações</option>
+                    <option value="1">Geração I (1-151)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" id="totalPokemon">0</span>
+                <span class="stat-label">Pokémon carregados</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="shownPokemon">0</span>
+                <span class="stat-label">Exibindo</span>
+            </div>
+        </div>
+
+        <ol id="pokemonList" class="pokemons">
+                  </ol>
+
+        <div class="pagination">
+            <button id="loadMoreButton" type="button" class="load-more-btn">
+                <i class="fas fa-plus"></i>
+                Carregar mais Pokémon
+            </button>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>Nenhum Pokémon encontrado</h3>
+            <p>Tente ajustar sua busca ou filtros</p>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="pokemonModal">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modalContent">
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
