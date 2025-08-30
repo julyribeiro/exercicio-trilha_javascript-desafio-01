@@ -29,14 +29,14 @@ Durante o desenvolvimento, foram aplicados:
 
 - **HTML5**  
 - **CSS3**  
-- **JavaScript (ES6+)**  
+- **JavaScript**  
 - **PokéAPI (REST API)**  
 - **Git & GitHub**  
 
 ---
 
 ## 🌐 Demonstração
-➡ 🔗 [Clique no link a para acessar o projeto online](https://julyribeiro.github.io/api-pokedex)
+➡ 🔗 [Clique no link a para acessar o projeto online](https://julyribeiro.github.io/exercicio-trilha_javascript-desafio-01/)
 
 ---
 
